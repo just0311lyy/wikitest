@@ -1,84 +1,72 @@
 
 # TimerNode
 ------------------------------------------------------------------------------------------
-#### 描述
+## 描述
 
-`TimerNode`定时器节点允许指定一个`lua`回调方法在一定时间后执行。
+TimerNode 定时器节点允许指定一个lua 回调方法在一定时间后执行。
+
 
 ------------------------------------------------------------------------------------------
-#### 属性
+## 属性
 
-|<div style="width:925px">\<LuaFunction\> Callback</div>|
+|<div style="width:925px">[LuaFunction](/DataType/Luafunction.md) &emsp;[<font color="dd00dd">Callback</font><br /> ]()</div>|
 |:-----------------------|
 |lua回调方法             |
 
-|<div style="width:925px">double Delay</div>|
+|<div style="width:925px">[double]() &emsp;[<font color="dd00dd">Delay</font><br /> ]()</div>|
 |:-----------------------|
-|首次延迟执行的事件      |
+|首次延迟执行的事件           |
 
-|<div style="width:925px">bool Loop</div>|
+|<div style="width:925px">[bool]() &emsp;[<font color="dd00dd">Loop</font><br /> ]()</div>|
 |:-----------------------|
-|是否循环执行            |
+|是否循环执行           |
 
-|<div style="width:925px">double Interval</div>|
+|<div style="width:925px">[double]() &emsp;[<font color="dd00dd">Interval</font><br /> ]()</div>|
 |:-----------------------|
-|循环执行间隔            |
+|循环执行间隔           |
 
-|<div style="width:925px">double Interval</div>|
-|:---------------------------------------------|
-|循环执行间隔                                  |
+|<div style="width:925px">[TimerRunState]() &emsp;[<font color="dd00dd">TimerRunState</font><br /> ]()</div>|
+|:-----------------------|
+|当前循环状态，包括：空闲，运行，暂停。           |
 
-------------------------------------------------------------------------------------------
-#### 枚举：
 
-|<div style="width:200px">TimerRunState</div>|<div style="width:100px"></div>|<div style="width:100px"></div>|
-:---   |:---|:---
-运行状态枚举
-名称   |值  |描述
-IDLE   |0   |空闲
-RUNNING|1   |运行中
-PAUSE  |2   |暂停
 
 
 ------------------------------------------------------------------------------------------
-#### 函数
-
-|<div style="width:925px">void Start()</div>|
-|:---|
-|开始执行。需要先设置参数|
-
-|<div style="width:925px">void Pause()</div>|
-|:---|
-|暂停。需要在开始执行后调用|
-
-|<div style="width:925px">void Resume()</div>|
-|:---|
-|恢复。需要在暂停后调用|
-
-|<div style="width:925px">void Stop()</div>|
-|:---|
-|停止。需要在执行后调用|
+## 函数
 
 
-|<div style="width:500px">void StartEx( double delay, bool loop, double interval, AutoRef<LuaFunction> cb )</div>|<div style="width:100px"></div>|<div style="width:45px"></div>|<div style="width:200px"></div>|
-|:---|:---|:---|:---|
-|开始执行。附带初始化的参数此服务器中可以容纳的最大玩家数量||||
-|参数名称|类别|默认|描述|
-|delay|double||延迟秒数|
-|loop|bool||是否循环|
-|interval|double||环间隔多少秒|
-|cb|LuaFunction||回调方法|
+|<div style="width:925px">[void]() &emsp;[<font color="dd00dd">Start</font>]()()</div>|
+|:-----------------------|
+|暂停。需要在开始执行后调用           |
 
-|<div style="width:500px">TimerRunState GetRunState()</div>|<div style="width:400px"></div>|
-|:---|:---|
-|获取运行状态||
-|返回类型|概要|
-|TimerRunState|运行状态。参见枚举TimerRunState|
+|<div style="width:925px">[void]() &emsp;[<font color="dd00dd">Pause</font> ]()()</div>|
+|:-----------------------|
+|暂停。需要在开始执行后调用           |
+
+|<div style="width:925px">[void]() &emsp;[<font color="dd00dd">Resume</font> ]()()</div>|
+|:-----------------------|
+|恢复。需要在暂停后调用           |
+
+|<div style="width:925px">[void]() &emsp;[<font color="dd00dd">Stop</font>]()()</div>|
+|:-----------------------|
+|停止。需要在执行后调用          |
+
+|<div style="width:925px">[void]() &emsp;[<font color="dd00dd">StartEx</font> ]() ([double]() delay, [bool]() loop, [double]() interval, [AutoRef<LuaFunction>]() cb)  </div>|
+|:-----------------------|
+|开始执行。附带初始化的参数此服务器中可以容纳的最大玩家数量          |
+
+|<div style="width:925px">[void]() &emsp;[<font color="dd00dd">GetRunState</font> ]() ()  </div>|
+|:-----------------------|
+|开始执行。附带初始化的参数此服务器中可以容纳的最大玩家数量          |
 
 
-#### 事件
+
+
+
+## 事件
 ------------------------------------------------------------------------------------------
-#### 示例代码
+## 示例代码
 
 ```lua
 local a = 0

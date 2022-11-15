@@ -1,12 +1,16 @@
-# ScenePartObject
+# SandboxFire
 ------------------------------------------------------------------------------------------
 ## 描述
 
-编辑创建的基础部件(圆柱,圆球等)
-继承：`ScenePrimitiveObject`
+特效类型中的火焰特效
+继承：`SandboxDefaultEffect`
 
 ------------------------------------------------------------------------------------------
 ## 属性
+
+|<div style="width:1125px">[EnumDefaultEffect]() &emsp;[<font color="dd00dd">EffectType</font>]()</div>|
+|:---|
+|特效类型选择。见父类SandboxDefaultEffect的枚举`SandboxFire::EnumDefaultEffect`|
 
 ------------------------------------------------------------------------------------------
 ## 函数
